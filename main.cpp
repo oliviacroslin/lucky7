@@ -30,15 +30,26 @@ int main() {
 //
 //    return 0;
 //}
-    int sum = 0;
+//    int sum = 0;
+//
+//    int i = 1;
+//    while (i <= 50)
+//    {
+//        sum = sum + i * 7;
+//        i++;
+//    }
+//    cout << sum << endl;
+
+    int num = 1;
 
     int i = 1;
-    while (i <= 50)
+    while (i <= 10)
     {
-        sum = sum + i * 7;
-        i++;
+        num = num * i;
+
+        i ++;
+        cout << num << endl;
     }
-    cout << sum << endl;
 }
 
 
