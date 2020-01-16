@@ -2,6 +2,7 @@
 // This is my own work
 
 #include <iostream>
+#include <string.h>
 
 using namespace std;
 
@@ -40,16 +41,83 @@ int main() {
 //    }
 //    cout << sum << endl;
 
-    int num = 1;
+//    int num = 1;
+//
+//    int i = 1;
+//    while (i <= 10)
+//    {
+//        num = num * i;
+//
+//        i ++;
+//        cout << num << endl;
+//    }
+//    char phrase[30];
+//    int i, length;
+//    int flag = 0;
+//
+//    cout << "Enter a word to see if is a palindrome: "; cin >> phrase;
+//
+//    length = strlen(phrase);
+//
+//    for(i=0; i < length; i++){
+//        if(phrase[i] != phrase[length-i-1]){
+//            flag = 1;
+//            break;
+//        }
+//    }
+//    if (flag) {
+//        cout << phrase << " is not a palindrome." << endl;
+//    }
+//    else {
+//        cout << phrase << " is a palindrome." << endl;
+//    }
+//    return 0;
+//}
 
-    int i = 1;
-    while (i <= 10)
-    {
-        num = num * i;
+//    int n, i;
+//        bool prime = true;
+//
+//        cout << "Enter a positive integer: ";
+//        cin >> n;
+//
+//        for(i = 2; i <= n / 2; ++i)
+//        {
+//            if(n % i == 0)
+//            {
+//                prime = false;
+//                break;
+//            }
+//        }
+//        if (prime)
+//            cout << "This is a prime number";
+//        else
+//            cout << "This is not a prime number";
+//
+//        return 0;
+//    }
 
-        i ++;
-        cout << num << endl;
+    int a, b, c, d, e;
+
+    cout << "Enter 5 integers: ";
+    cin >> a >> b >> c >> d >> e;
+
+    int array[5] = {a, b, c, d, e};
+
+    double sum = 0;
+    double average;
+
+    for(int i=0; i<5; i++){
+        sum += array[i];
     }
+    average = sum/5;
+
+    cout << "The average is: " << average << endl;
+    return 0;
 }
+
+
+
+
+
 
 
