@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string.h>
+#include <fstream>
 
 using namespace std;
 
@@ -96,28 +97,48 @@ int main() {
 //        return 0;
 //    }
 
-    int a, b, c, d, e;
+//    int a, b, c, d, e;
+//
+//    cout << "Enter 5 integers: ";
+//    cin >> a >> b >> c >> d >> e;
+//
+//    int array[5] = {a, b, c, d, e};
+//
+//    double sum = 0;
+//    double average;
+//
+//    for(int i=0; i<5; i++){
+//        sum += array[i];
+//    }
+//    average = sum/5;
+//
+//    cout << "The average is: " << average << endl;
+//    return 0;
+//}
+    int n;
+    string* wordList;
+    cout << "Enter the number of words to process: ";
+    int size;
+    cin >> size;
 
-    cout << "Enter 5 integers: ";
-    cin >> a >> b >> c >> d >> e;
+    wordList = new string[size];
 
-    int array[5] = {a, b, c, d, e};
+    ifstream fin("input.n");
 
-    double sum = 0;
-    double average;
-
-    for(int i=0; i<5; i++){
-        sum += array[i];
+    if(!fin){
+        cerr<< "File not found" << endl;
+        exit(1);
     }
-    average = sum/5;
+    int i = 0;
+    while (i < size) {
+        fin >> wordList[i];
+        i++;
+    }
+    for (int j = 0; j < size; j++)
+    {
+        cout << wordList[j]<<'\t';
+    }
+    delete[] wordList;
 
-    cout << "The average is: " << average << endl;
     return 0;
 }
-
-
-
-
-
-
-
